@@ -1,108 +1,158 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aurak</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/eeb7f4a51c.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/eeb7f4a51c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header class="navbar">
-        <div class="navbar__container">
-            <a href="#main" id="navbar__logo"></i>AURAK</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#factors" class="navbar__links"> FACTORES </a>
-                </li>
-                <li class="navbar__item">
-                  <a href="#agenda" class="navbar__links"> AGENDA </a>
-              </li>
-              <li class="navbar__item">
-                <a href="#contact" class="navbar__links"> CONTACTANOS </a>
-            </li>
-            </ul>
+      <div class="navbar__container">
+        <a href="#main" id="navbar__logo">
+          <div class="logoIMG"><img src="images/logoWhite.png" /></div>
+          <div class="logoText"><img src="images/logoText.png" /></div>
+        </a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </header>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#factors" class="navbar__links"> CONOCENOS </a>
+          </li>
+          <li class="navbar__item">
+            <a href="#pasos" class="navbar__links"> PASOS </a>
+          </li>
+          <li class="navbar__item">
+            <a href="#agenda" class="navbar__links"> AGENDA </a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contact" class="navbar__links"> CONTACTANOS </a>
+          </li>
+        </ul>
+      </div>
+    </header>
     <div class="content">
-    <div class="main">
-      <div class="main__container" id="main">
-        <div class="main__content">
-          <h1>CREANDO EMPRESAS</h1>
-          <h2>EXTRAORDINARIAS</h2>
-          <p>Servicio de Consultoria</p>
-        </div>
-        <div class="main__img--container">
-        <img src="images/pic1.png" alt="pic" id="main__img"/>
-      </div>
-      </div>
-    </div>
-
-    <div class="factors" id="factors">
-      <h1>¿Tu empresa tiene alguno de estos factores?</h1>
-      <div class="factors__container">
-      
-      </div>
-    </div>
-    <div class="agenda" id="agenda">
-      <div class="agendaLeft">
-        <h1>Agenda una cita con nosotros</h1>
-      </div>
-      <div class="agendaRight">
-        <form id="meetingForm">
-          <div class="input-group">
-            <input type="text" id="name" name="name" required>
-            <label for="name">Name</label>
+      <div class="main">
+        <div class="main__container" id="main">
+          <div class="main__content">
+            <h1>CREANDO EMPRESAS</h1>
+            <h2>EXTRAORDINARIAS</h2>
+            <p>Servicio de Consultoria</p>
           </div>
-          <div class="input-group">
-            <input type="email" id="email" name="email" required>
-            <label for="email">Email</label>
-          </div>
-          <div class="input-group">
-            <input type="datetime-local" id="datetime" name="datetime" required>
-          </div>
-          <button type="submit">Agendar</button>
-        </form>
-      </div>
-    </div>    
-    <div class="contact" id="contact">
-      <h1>Contactanos</h1>
-    </div>
-    <div class="footer__container" id="footer">
-      <div class="social__media">
-        <div class="social__media--wrap">
-          <div class="footer__logo">
-            <a href="/" id="footer__logo"></i>AURAK</a>
-          </div>
-          <p class="website__right">© AURAK 2024. Derechos Reservados</p>
-          <div class="social__icons">
-            <a href="/" class="social__icon--link" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="/" class="social__icon--link" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="/" class="social__icon--link" target="_blank">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="/" class="social__icon--link" target="_blank">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
+          <div class="main__img--container">
+            <img src="images/pic1.png" alt="pic" id="main__img" />
           </div>
         </div>
       </div>
-    </div>
 
-  </div>
+      <div class="factors" id="factors">
+        <div class="factorsHeader">
+          <h1>Lo Especial de AURAK</h1>
+        </div>
+        <div class="factors__main"></div>
+      </div>
+      <div class="pasos__container" id="pasos">
+        <h1>Crece con Nosotros en Tres Simples Pasos</h1>
+        <div class="pasos">
+          <div class="paso1">
+            <h2>Agenda tu Consulta Gratuita</h2>
+            <p>
+              Comienza tu camino hacia el éxito. Agenda una cita sin costo y
+              descubre cómo nuestros expertos pueden impulsar tu negocio. Solo
+              selecciona el horario que mejor te convenga y prepárate para una
+              nueva etapa.
+            </p>
+          </div>
+          <div class="paso2">
+            <h2>Recibe Asesoría Personalizada</h2>
+            <p>
+              En esta segunda etapa, te conectaremos con un equipo especializado
+              que entiende las dinámicas de tu sector. Permítenos profundizar en
+              tus desafíos y oportunidades para diseñar estrategias a medida que
+              resuenen con tus necesidades únicas.
+            </p>
+          </div>
+          <div class="paso3">
+            <h2>Implementa tu Plan Estratégico</h2>
+            <p>
+              Finalmente, te presentaremos un plan detallado que especifica
+              costos y cronogramas, diseñado para maximizar el crecimiento de tu
+              empresa. Una vez aprobado, pondremos en marcha nuestras soluciones
+              para que veas resultados tangibles.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="agenda" id="agenda">
+        <div class="agendaLeft">
+          <h1>Agenda una cita con nosotros</h1>
+        </div>
+        <div class="agendaRight">
+          <form id="meetingForm">
+            <div class="input-group">
+              <input type="text" id="name" name="name" required />
+              <label for="name">Name</label>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" name="email" required />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+              <input
+                type="datetime-local"
+                id="datetime"
+                name="datetime"
+                required
+              />
+            </div>
+            <button type="submit">Agendar</button>
+          </form>
+        </div>
+      </div>
+      <div class="contact" id="contact">
+        <h1>Contactanos</h1>
+      </div>
+      <div class="footer__container" id="footer">
+        <div class="social__media">
+          <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="/" id="footer__logo"
+                ><img src="images/logoBlack.png"
+              /></a>
+            </div>
+            <p class="website__right">© AURAK 2024. Derechos Reservados</p>
+            <div class="social__icons">
+              <a href="/" class="social__icon--link" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="/" class="social__icon--link" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="/" class="social__icon--link" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="/" class="social__icon--link" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

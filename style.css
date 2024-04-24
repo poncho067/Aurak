@@ -31,21 +31,32 @@ html {
   margin: 0 auto;
   padding: 0 50px;
 }
+.navbar__container img {
+  position: relative;
+  top: 6px;
+}
 
 #navbar__logo {
-  font-weight: 700;
-  background-color: #ffffff;
-  background-image: linear-gradient(to top, #f5f5f5 0%, #ffffff 100%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
+}
+
+.logoText img{
+  width: 200px;
+  height: 70px;
+  filter: invert();
+  object-fit: cover;
+  object-position: bottom;
+  position: relative;
+  left: -40px;
+}
+
+.logoIMG img{
+  width: 90px;
+  position: relative;
+  top: 5px;
 }
 
 .navbar__menu {
@@ -102,7 +113,7 @@ html {
 
   .navbar__menu.active {
     background: #131313;
-    top: 70%;
+    top: 80%;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
@@ -284,29 +295,115 @@ html {
   animation: slideIn 1.5s ease forwards;
 }
 
-.factors h1 {
-  background-color: #000000;
-  background-image: linear-gradient(to bottom, #868686 0%, #2b2b2b 60%);
-  background-size: 100%;
-  margin-top: 0;
-  margin-bottom: 5rem;
-  font-size: 4vw;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-
 .factors__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.factors h2 {
+.factorsHeader {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.factors h1 {
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #868686 0%, #2b2b2b 60%);
+  background-size: 100%;
+  margin-top: 0;
+  text-wrap: wrap;
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.pasos__container {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  background-image: url(images/backgroundGray.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideIn 1.5s ease forwards;
+}
+
+.pasos__container h1 {
   position: absolute;
-  top: 350px;
-  left: 30px;
+  text-align: center;
+  font-weight: 500;
+  padding: 20px 20px;
+  background-color: white;
+  background-image: linear-gradient(to top, #b3b3b3 0%, #ffffff 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.pasos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0 70px;
+}
+
+.paso1 {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.paso2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.paso3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 910px) {
+  
+  .pasos__container {
+    min-height: 950px;
+  }
+
+  .pasos {
+    padding-top: 50px;
+    flex-direction: column;
+    max-width: 60vw;
+    max-height: 60vw;
+    min-width: 521px;
+    min-height: 521px;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .paso2 {
+    border: none;
+  }
 }
 
 .footer__container {
@@ -319,13 +416,9 @@ html {
   animation: slideIn 1.5s ease forwards;
 }
 
-#footer__logo {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
+.footer__logo img {
+  width: 100px;
+  filter: invert();
 }
 
 .social__icon--link {
@@ -371,8 +464,8 @@ html {
 }
 
 @media screen and (max-width: 820px) {
-  #footer__logo {
-    margin-bottom: 2rem;
+  .footer__logo {
+    margin-bottom: 1rem;
   }
 
   .website__right {
@@ -452,6 +545,17 @@ input:focus + label,
   border-radius: 3px;
 }
 
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: 0px;
+  font-size: 12px;
+  color: #555;
+  background: white;
+  border: 1px solid #888;
+  padding: 0.5px 3px;
+  border-radius: 3px;
+}
+
 button {
   padding: 10px 20px;
   background-color: #333;
@@ -505,6 +609,7 @@ button:active {
   background-color: white;
   background-image: linear-gradient(to top, #868686 0%, #ffffff 100%);
   background-size: 100%;
+  font-weight: 500;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
