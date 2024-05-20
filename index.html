@@ -30,16 +30,10 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="#factors" class="navbar__links"> CONOCENOS </a>
-          </li>
-          <li class="navbar__item">
             <a href="#pasos" class="navbar__links"> PASOS </a>
           </li>
           <li class="navbar__item">
             <a href="#agenda" class="navbar__links"> AGENDA </a>
-          </li>
-          <li class="navbar__item">
-            <a href="#contact" class="navbar__links"> CONTACTANOS </a>
           </li>
         </ul>
       </div>
@@ -57,13 +51,7 @@
           </div>
         </div>
       </div>
-
-      <div class="factors" id="factors">
-        <div class="factorsHeader">
-          <h1>Lo Especial de AURAK</h1>
-        </div>
-        <div class="factors__main"></div>
-      </div>
+      <div class="pasos__background">
       <div class="pasos__container" id="pasos">
         <h1>Crece con Nosotros en Tres Simples Pasos</h1>
         <div class="pasos">
@@ -96,34 +84,32 @@
           </div>
         </div>
       </div>
+    </div>
       <div class="agenda" id="agenda">
         <div class="agendaLeft">
           <h1>Agenda una cita con nosotros</h1>
         </div>
         <div class="agendaRight">
-          <form id="meetingForm">
+          <form method="post" action="" id="meetingForm">
             <div class="input-group">
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="Name" required />
               <label for="name">Name</label>
             </div>
             <div class="input-group">
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="Email" required />
               <label for="email">Email</label>
             </div>
             <div class="input-group">
               <input
                 type="datetime-local"
                 id="datetime"
-                name="datetime"
+                name="Date & Time"
                 required
               />
             </div>
-            <button type="submit">Agendar</button>
+            <button type="submit" value="Submit" id="submit">Agendar</button>
           </form>
         </div>
-      </div>
-      <div class="contact" id="contact">
-        <h1>Contactanos</h1>
       </div>
       <div class="footer__container" id="footer">
         <div class="social__media">

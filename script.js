@@ -36,47 +36,13 @@ document.querySelectorAll(".navbar__links").forEach((link) => {
   });
 });
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwbl9qxWAoKqqLprVPYtmcD9iu-1P52nDcxED4L9bq2ItErIQ1mNmdCZ1EAL3lx82zf/exec'
+const form = document.forms['meetingForm']
 
-
-document.getElementById('meetingForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  // Get form values
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const datetime = document.getElementById('datetime').value;
-
-  // Validate form values (additional validation can be added as needed)
-  if (name === '' || email === '' || datetime === '') {
-      alert('Please fill in all fields.');
-      return;
-  }
-
-  // Create an appointment object
-  const appointment = {
-      name: name,
-      email: email,
-      datetime: datetime
-  };
-
-  // Send the appointment data to the server
-  fetch('http://localhost:3000/appointments', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(appointment)
-  })
-  .then(response => response.json())
-  .then(data => {
-      // Handle success response
-      console.log('Appointment Scheduled:', data);
-      alert('Appointment scheduled successfully!');
-      document.getElementById('meetingForm').reset(); // Clear the form
-  })
-  .catch(error => {
-      // Handle error response
-      console.error('Error:', error);
-      alert('There was an error scheduling your appointment. Please try again.');
-  });
-});
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+.then(response => alert("Tu cita se agendo correctamente. Recibiras confirmación pronto"))
+.then (() => { window.location.reload(); })
+.catch(error => console.error('Error!', error.message))
+})

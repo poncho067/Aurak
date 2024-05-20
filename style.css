@@ -182,6 +182,13 @@ html {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+.main {
+  background-image: url(images/Background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .main__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -192,12 +199,11 @@ html {
   z-index: 1;
   width: 100%;
   padding: 0 5%;
-  background-image: url(images/Background.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: slideIn 1.5s ease forwards;
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit -300px;
 }
+
 
 .main__content h1 {
   font-size: 4.19vw;
@@ -285,39 +291,11 @@ html {
   }
 }
 
-.factors {
-  padding-top: 40px;
-  background: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 95vh;
-  animation: slideIn 1.5s ease forwards;
-}
-
-.factors__container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.factorsHeader {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.factors h1 {
-  background-color: #000000;
-  background-image: linear-gradient(to bottom, #868686 0%, #2b2b2b 60%);
-  background-size: 100%;
-  margin-top: 0;
-  text-wrap: wrap;
-  font-weight: 500;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+.pasos__background {
+  background-image: url(images/backgroundGray.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .pasos__container {
@@ -326,11 +304,10 @@ html {
   flex-direction: column;
   align-items: center;
   height: 90vh;
-  background-image: url(images/backgroundGray.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: slideIn 1.5s ease forwards;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: contain -200px;
 }
 
 .pasos__container h1 {
@@ -364,6 +341,10 @@ html {
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
+  animation: slideLeft 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range-start: cover 0px;
+  animation-range-end: contain 300px;
 }
 
 .paso2 {
@@ -374,6 +355,10 @@ html {
   border-right: 1px solid white;
   padding-left: 20px;
   padding-right: 20px;
+  animation: slideUp 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range-start: cover 0px;
+  animation-range-end: contain 300px;
 }
 
 .paso3 {
@@ -382,6 +367,10 @@ html {
   gap: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  animation: slideRight 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range-start: cover 0px;
+  animation-range-end: contain 300px;
 }
 
 @media screen and (max-width: 910px) {
@@ -403,6 +392,16 @@ html {
 
   .paso2 {
     border: none;
+    animation: slideRight 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range-start: cover 0px;
+  animation-range-end: contain 300px;
+  }
+  .paso3 {
+    animation: slideLeft 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range-start: cover -100px;
+  animation-range-end: contain 00px;
   }
 }
 
@@ -487,7 +486,10 @@ html {
   align-items: center;
   justify-content: center;
   height: 55vh;
-  animation: slideIn 1.5s ease forwards;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover -100px;
+  animation-range-end: contain 150px;
 }
 
 .agenda h1 {
@@ -605,4 +607,46 @@ button:active {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+@keyframes fade-in {
+  from {scale: .8; opacity: 0;}
+  to {scale: 1; opacity: 1;}
+}
+
+@keyframes fade-out {
+  to {opacity: 0;}
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
