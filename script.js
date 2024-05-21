@@ -36,13 +36,18 @@ document.querySelectorAll(".navbar__links").forEach((link) => {
   });
 });
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwbl9qxWAoKqqLprVPYtmcD9iu-1P52nDcxED4L9bq2ItErIQ1mNmdCZ1EAL3lx82zf/exec'
-const form = document.forms['meetingForm']
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwbl9qxWAoKqqLprVPYtmcD9iu-1P52nDcxED4L9bq2ItErIQ1mNmdCZ1EAL3lx82zf/exec";
+const form = document.forms["meetingForm"];
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-.then(response => alert("Tu cita se agendo correctamente. Recibiras confirmación pronto"))
-.then (() => { window.location.reload(); })
-.catch(error => console.error('Error!', error.message))
-})
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) =>
+      alert("Tu cita se agendo correctamente. Recibiras confirmación pronto")
+    )
+    .then(() => {
+      window.location.reload();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
